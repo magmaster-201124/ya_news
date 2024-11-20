@@ -18,6 +18,8 @@ class TestRoutes(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        # Стандартным методом Django ORM create() создаём объект класса.
+        # Присваиваем объект атрибуту класса: назовём его news.
         cls.news = News.objects.create(title='Заголовок', text='Текст')
         # Создаём двух пользователей с разными именами:
         cls.author = User.objects.create(username='Лев Толстой')
