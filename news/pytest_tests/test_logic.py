@@ -18,6 +18,7 @@ def test_comment_anonymous_user(client, news):
     count_after_post = Comment.objects.count()
     assert count_befor_post == count_after_post
 
+
 @pytest.mark.django_db
 def test_comment_authorized_user(user, user_client, news):
     """Возможность отправки комментария авторизованным пользователем."""
